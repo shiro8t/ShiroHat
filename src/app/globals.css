@@ -2,32 +2,138 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.custom-markdown h1 {
+    font-size: 1.75em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.custom-markdown h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.custom-markdown h3 {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.custom-markdown h4 {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.custom-markdown h5 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.custom-markdown h6 {
+    font-size: 0.85em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.custom-markdown p {
+    margin: 10px 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.custom-markdown em {
+    font-style: italic;
+}
+.custom-markdown strong {
+    font-weight: bold;
+}
+.custom-markdown del {
+    text-decoration: line-through;
+}
+.custom-markdown ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+.custom-markdown ol {
+    list-style-type: decimal;
+    margin-left: 20px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.custom-markdown blockquote {
+    border-left: 5px solid rgb(200, 200, 200);
+    padding-left: 10px;
+    margin: 10px 0;
+    color: rgb(100, 100, 100);
+    font-style: italic;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.custom-markdown a {
+    color: #007bff;
+    text-decoration: none;
+}
+.custom-markdown a:hover {
+    text-decoration: underline;
+}
+
+.custom-markdown img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.custom-markdown code {
+    background-color: #f8f8f8;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+}
+.custom-markdown pre code {
+    display: block;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    overflow-x: auto;
+}
+
+.custom-markdown table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.custom-markdown table th, .custom-markdown table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.custom-markdown table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.custom-markdown hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.custom-markdown input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.custom-markdown sup {
+    font-size: 0.75em;
+    vertical-align: super;
+}
+
+.custom-markdown details summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.custom-markdown details {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
 }
